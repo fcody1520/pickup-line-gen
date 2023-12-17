@@ -1,0 +1,55 @@
+body {
+    color: aliceblue;
+    background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif);
+    /* background-color: #00cccc; */
+    background-size: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form {
+    color: black;
+    align-items: center;
+    margin-top: 25px;
+    border-radius: 9px;
+    border:3px #0d98ba solid;
+    padding: 25px;
+    background-color: aquamarine;
+    
+}
+form > * {
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    margin-top: 10px;
+}
+
+form > label {
+    margin-top: 1px;
+}
+form > button {
+    margin-top: 10px;
+}
+
+button {
+    border-radius: 16px;
+    background-color: #fe91d3;
+    /* background-image: url(https://j.gifs.com/736RPw.gif); */
+    padding: 5px 10px;
+    border: 1px solid #0d98ba;
+    font-family: 'Courier New', Courier, monospace;
+
+    
+}
+
+#display-line {
+    color: white;
+    font-size: 36px;
+    margin-top: 30px;
+    font-style: bold;
+}
+
+/* #background-video { width: 100vw; height: 100vh; object-fit: cover; position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: -1;}  */

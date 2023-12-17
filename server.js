@@ -9,8 +9,7 @@ app.use(express.json())
 
 let peopleDb = []
 
-let jokeDb = [`Are you a microwave? 'Cause MMMMMMMMMMMMMMM`,]
-// const random = Math.floor(Math.random() * jokeDb.length)
+let jokeDb = [`Are you a microwave? 'Cause MMMMMMMMMMMMMMM`,'hello there, general kenobi']
 
 
 app.use(express.static(join(dirname(fileURLToPath(import.meta.url)), '/public')))
@@ -20,10 +19,14 @@ app.get('/names', (req,res) => {
     res.status(200).send(lastName)
 })
 
+app.get('/random-joke', (req, res) => {
+    const random = Math.floor(Math.random() * jokeDb.length)
+    res.send(jokeDb[random]);
+})
+
 app.post('/add-name', (req,res) => {
     peopleDb.push(req.body);
-    let lastName = peopleDb.slice(-1);
-    res.status(200).send(lastName)
+    res.status(200).send(req.body.name)
 })
 
 

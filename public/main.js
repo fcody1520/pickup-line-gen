@@ -10,9 +10,11 @@ addName.addEventListener('submit', (event) => {
         name: nameInput.value
     }
     
+    // change what's below to random generator or something so it gets both name and joke
     axios.post('/add-name', maBod)
     .then((response) => {
         console.log(response.data);
+        console.log(mabod.name);
     })
     .catch((err) => {
         console.log(err);
@@ -31,7 +33,9 @@ axios.get('/names')
     console.log(err);
 })
 
-function pickupLineGen(nameArr,lineArr){
+
+
+function pickupLineGen(name,line){
     // create the elements that will hold the persons name from people DB, and the joke from jokeDb
     document.getElementById('display-line').innerHTML = ''
 
@@ -42,10 +46,10 @@ function pickupLineGen(nameArr,lineArr){
     container.appendChild(headName)
     container.appendChild(goldLine)
     // grab the last name that was entered from peopleDb
-    headName.innerHTML = nameArr[-1].name
+    headName.innerHTML = 
     
     // grab a random pickup line from jokeDb
-    goldLine.innerHTML =lineArr[Math.floor(Math.random() * lineArr.length)]
+    goldLine.innerHTML =
     
     // append child to div with id "display-line"
     document.getElementById('display-line').appendChild(container)

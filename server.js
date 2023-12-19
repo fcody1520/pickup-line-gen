@@ -9,7 +9,7 @@ app.use(express.json())
 
 let peopleDb = []
 
-let jokeDb = [`Are you a microwave? 'Cause MMMMMMMMMMMMMMM`,'hello there, general kenobi']
+let jokeDb = [`Are you a microwave? 'Cause MMMMMMMMMMMMMMM`, 'Do you have an ugly partner? Do you want one?','*drops sugar packet* Excuse me, I think you dropped your nametag', 'Did you sit in sugar? Because you lookin sweet!']
 
 
 

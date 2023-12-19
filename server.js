@@ -12,6 +12,7 @@ let peopleDb = []
 let jokeDb = [`Are you a microwave? 'Cause MMMMMMMMMMMMMMM`,'hello there, general kenobi']
 
 
+
 app.use(express.static(join(dirname(fileURLToPath(import.meta.url)), '/public')))
 
 app.get('/names', (req,res) => {
@@ -21,12 +22,23 @@ app.get('/names', (req,res) => {
 
 app.get('/random-joke', (req, res) => {
     const random = Math.floor(Math.random() * jokeDb.length)
-    res.send(jokeDb[random]);
+    res.status(200).send(jokeDb[random]);
 })
 
 app.post('/add-name', (req,res) => {
     peopleDb.push(req.body);
-    res.status(200).send(req.body.name)
+    res.status(200).send(req.body)
+})
+
+app.delete('/delete-name/:name', () => {
+    let deleteName = req.params.name
+    console.log(req.params.name);
+    for (let i=0; i<peopleDb.length; i++){
+        if (peopleDb[i].name === deleteName){
+            peopleDb.splice(i, 1)
+        }
+    }
+
 })
 
 

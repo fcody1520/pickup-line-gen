@@ -13,15 +13,20 @@
         <label for="name">Enter their name here!</label>
         <input type="text" id="person-name" placeholder="Ex.: Cody">
         <button>Show me the line!</button>
+        <p id="warning">We collect names incase </p>
+        <p id="warning">you would like to buy a </p>
+        <p id="warning"> card with the pickup line!</p>
 
     </form>
-    <div id="display-line" >Joke will be here</div>
+    <div id="display-line" ></div>
 
     <form id="delete-name">
-            <h2>Whose name would you </h2>
-            <h2>like to delete?</h2>
-            <label for="delete-name">Enter their name below</label>
-            <input type="text" id="delete-name" placeholder="Ex. Timmah">
+            <p>Delete your name here</p>
+            <p>if you don't want it</p>
+            <p>in our database.</p>
+
+            <label for="delete-name">Enter your name below:</label>
+            <input type="text" id="delete-name-input" placeholder="Ex. Timmah">
             <button>Destroy them!</button>
         </form>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

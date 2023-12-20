@@ -9,8 +9,17 @@ app.use(express.json())
 
 let peopleDb = []
 
-let jokeDb = [`Are you a microwave? 'Cause MMMMMMMMMMMMMMM`, 'Do you have an ugly partner? Do you want one?','*drops sugar packet* Excuse me, I think you dropped your nametag', 'Did you sit in sugar? Because you lookin sweet!']
-
+let jokeDb = [`Are you a microwave? 'Cause MMMMMMMMMMMMMMM`, 
+'Do you have an ugly partner? Do you want one?',
+'*drops sugar packet* Excuse me, I think you dropped your nametag', 
+'Did you sit in sugar? Because you lookin sweet!',
+`I wish I could plant you and grow a whole field of y'all!`, 
+`Your legs must be tired 'cause you've been running through my mind all day!`, 
+`Can I follow you? My parents told me to follow my dreams`,
+`You know, it'd be a lot easier for me to sweep you off your feet if you were standing up...`,
+`you dropped something ... Your standards. let me introduce myself!`,
+`*Draws line on napkin and gives it to partner*    It's my pickup line. `]
+  
 
 
 app.use(express.static(join(dirname(fileURLToPath(import.meta.url)), '/public')))

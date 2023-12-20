@@ -12,7 +12,7 @@ let peopleDb = []
 let jokeDb = [`Are you a microwave? 'Cause MMMMMMMMMMMMMMM`, 
 'Do you have an ugly partner? Do you want one?',
 '*drops sugar packet* Excuse me, I think you dropped your nametag', 
-'Did you sit in sugar? Because you lookin sweet!',
+'Did you sit in sugar? Because that booty lookin sweet!',
 `I wish I could plant you and grow a whole field of y'all!`, 
 `Your legs must be tired 'cause you've been running through my mind all day!`, 
 `Can I follow you? My parents told me to follow my dreams`,

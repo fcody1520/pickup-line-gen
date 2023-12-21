@@ -61,7 +61,7 @@ deleteName.addEventListener('submit', (evt) => {
 
     let deleteName = document.getElementById('delete-name-input').value;
     axios.delete(`/delete-name/${deleteName}`)
-    .then((response) => {
+    .then(() => {
         alert(`${deleteName} was removed!`)
     })
 })

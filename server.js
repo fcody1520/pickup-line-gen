@@ -18,7 +18,8 @@ let jokeDb = [`Are you a microwave? 'Cause MMMMMMMMMMMMMMM`,
 `Can I follow you? My parents told me to follow my dreams`,
 `You know, it'd be a lot easier for me to sweep you off your feet if you were standing up...`,
 `you dropped something ... Your standards. let me introduce myself!`,
-`*Draws line on napkin and gives it to partner*    It's my pickup line. `]
+`*Draws line on napkin and gives it to partner*    It's my pickup line. `,
+`*LDS ONLY* Are you the sword of Laban? Cause your workmanship is exceedingly fine!` ]
   
 
 
@@ -39,7 +40,7 @@ app.post('/add-name', (req,res) => {
     res.status(200).send(req.body)
 })
 
-app.delete('/delete-name/:name', () => {
+app.delete('/delete-name/:name', (req,res) => {
     let deleteName = req.params.name
     console.log(req.params.name);
     for (let i=0; i<peopleDb.length; i++){
@@ -47,7 +48,7 @@ app.delete('/delete-name/:name', () => {
             peopleDb.splice(i, 1)
         }
     }
-
+    res.sendStatus(200)
 })
 
 

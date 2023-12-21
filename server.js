@@ -42,7 +42,7 @@ app.post('/add-name', (req,res) => {
 
 app.delete('/delete-name/:name', (req,res) => {
     let deleteName = req.params.name
-    console.log(req.params.name);
+
     for (let i=0; i<peopleDb.length; i++){
         if (peopleDb[i].name === deleteName){
             peopleDb.splice(i, 1)
